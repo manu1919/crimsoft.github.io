@@ -481,6 +481,12 @@ p.lead
 	color: #ffffff;
 	margin-bottom: 20px;
 }
+.values-text
+{
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
 .main-cursor {
 	opacity: 1;
 	-webkit-animation: blink .6s infinite;
