@@ -21,6 +21,60 @@
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+
+	<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: 155px 0 10px 0px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid orange;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#page {
+  display: none;
+  text-align: center;
+}
+</style>
     
 	<!-- Scripts -->
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -34,10 +88,13 @@
 	<script src="js/myscript.js" type="text/javascript"></script>
 	
 </head>
-<body>
+<body onload="myFunction()">
+
+	<!-- loader -->
+	<div id="loader"></div>
 
 	<!-- PAGE -->
-	<div id="page">
+	<div id="page" style="display:none;" class="animate-bottom">
 		
 		<!-- HEADER -->
 		<header>
@@ -296,5 +353,18 @@
 			</div>
 		</footer>
 	</div><!-- //Page -->
+
+	<script>
+		var myVar;
+
+		function myFunction() {
+		    myVar = setTimeout(showPage, 2000);
+		}
+
+		function showPage() {
+		  document.getElementById("loader").style.display = "none";
+		  document.getElementById("page").style.display = "block";
+		}
+</script>
 </body>
 </html>
