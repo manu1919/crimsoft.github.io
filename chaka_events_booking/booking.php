@@ -1,5 +1,4 @@
 <?php
-    error_reporting( ~E_NOTICE );
     $to = 'demo@spondonit.com';
     $from = $_POST["fname"];
     $to= $_POST["lname"];

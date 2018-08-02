@@ -238,7 +238,7 @@ header.menu_fixed {
 	background-size:cover;
 	background-position:center center;
 }
-.flexslider.top_slider .slides li.slide1 {background-image:url(../images/slider/slider.jpg);}
+.flexslider.top_slider .slides li.slide1 {background-image:url(../images/slider/slide1.jpg);}
 .flexslider.top_slider .slides li.slide2 {background-image:url(../images/slider/slide2.jpg);}
 .flex-direction-nav a {top:auto; bottom:30px;}
 .flexslider.top_slider .flex-direction-nav a.flex-prev {
